@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import * as O from "../../styles/MemberMngmn/OwnerMngmn.style";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function OwnerMngmn() {
   const navigate = useNavigate();
-
-  const dataFromServer = [
+  const [dataFromServer, setDataFromServer] = useState([
     {
       id: 1,
       name: "김민성",
@@ -39,11 +38,26 @@ function OwnerMngmn() {
       startDate: "2023/00/00",
       endDate: "2023/00/00",
     },
-  ];
+    {
+      id: 4,
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 창리로",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      account: "356-123456-72",
+      startDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+  ]);
+
+  const handleDelete = (id) => {
+    setDataFromServer((prevData) => prevData.filter((item) => item.id !== id));
+  };
 
   return (
     <O.OwnerMngmnLayOut>
-      <div onClick={() => Navigate("/")}>주민</div>
+      <div onClick={() => navigate("/")}>주민</div>
       <div>
         <input></input>
         <img></img>
@@ -53,14 +67,18 @@ function OwnerMngmn() {
       <div>필터</div>
       <O.OwnerMagmnTable>
         {dataFromServer.map((data) => (
-          <OwnmnTable key={data.id} data={data} />
+          <OwnmnTable key={data.id} data={data} onDelete={handleDelete} />
         ))}
       </O.OwnerMagmnTable>
     </O.OwnerMngmnLayOut>
   );
 }
 
-function OwnmnTable({ data }) {
+function OwnmnTable({ data, onDelete }) {
+  const handleDeleteClick = () => {
+    onDelete(data.id);
+  };
+
   return (
     <O.OwnerMagmnTableTr>
       <O.OwnerMagmnTableTd>{data.id}</O.OwnerMagmnTableTd>
@@ -73,7 +91,9 @@ function OwnmnTable({ data }) {
       <O.OwnerMagmnTableTd>{data.startDate}</O.OwnerMagmnTableTd>
       <O.OwnerMagmnTableTd>{data.endDate}</O.OwnerMagmnTableTd>
       <O.OwnerMagmnTableTd>수정</O.OwnerMagmnTableTd>
-      <O.OwnerMagmnTableTd>삭제</O.OwnerMagmnTableTd>
+      <O.OwnerMagmnTableTd>
+        <button onClick={handleDeleteClick}>삭제</button>
+      </O.OwnerMagmnTableTd>
     </O.OwnerMagmnTableTr>
   );
 }

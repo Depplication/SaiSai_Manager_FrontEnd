@@ -6,7 +6,7 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/membermngmn" element={<OwnerMngmnPage />}></Route>
+        <Route exact path="/ownermngmn" element={<OwnerMngmnPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
