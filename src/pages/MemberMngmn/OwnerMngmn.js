@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import * as O from "../../styles/MemberMngmn/OwnerMngmn.style";
 import { useNavigate } from "react-router-dom";
+import OwnerMemberInfoEdit from "./OwnerMemberInfoEdit";
 
 function OwnerMngmn() {
   const navigate = useNavigate();
+
   const [dataFromServer, setDataFromServer] = useState([
     {
       id: 1,
@@ -51,12 +53,31 @@ function OwnerMngmn() {
     },
   ]);
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedData, setSelectedData] = useState(null);
+
+  const handleEditClick = (data) => {
+    setSelectedData(data);
+    setIsPopupOpen(true);
+  };
+
   const handleDelete = (id) => {
     setDataFromServer((prevData) => prevData.filter((item) => item.id !== id));
   };
 
+  const handleEditSubmit = (editData) => {
+    setDataFromServer((prevData) => {
+      return prevData.map((item) =>
+        item.id === editData.id ? editData : item
+      );
+    });
+
+    setIsPopupOpen(false);
+  };
+
   return (
     <O.OwnerMngmnLayOut>
+      <div onClick={() => navigate("/ownermngmn")}>업주</div>
       <div onClick={() => navigate("/")}>주민</div>
       <div>
         <input></input>
@@ -67,16 +88,28 @@ function OwnerMngmn() {
       <div>필터</div>
       <O.OwnerMagmnTable>
         {dataFromServer.map((data) => (
-          <OwnmnTable key={data.id} data={data} onDelete={handleDelete} />
+          <OwnmnTable
+            key={data.id}
+            data={data}
+            onDelete={handleDelete}
+            onEdit={handleEditClick}
+          />
         ))}
       </O.OwnerMagmnTable>
+      {isPopupOpen && (
+        <OwnerMemberInfoEdit data={selectedData} onClose={handleEditSubmit} />
+      )}
     </O.OwnerMngmnLayOut>
   );
 }
 
-function OwnmnTable({ data, onDelete }) {
+function OwnmnTable({ data, onDelete, onEdit }) {
   const handleDeleteClick = () => {
     onDelete(data.id);
+  };
+
+  const handleEditClick = () => {
+    onEdit(data);
   };
 
   return (
@@ -90,8 +123,8 @@ function OwnmnTable({ data, onDelete }) {
       <O.OwnerMagmnTableTd>{data.account}</O.OwnerMagmnTableTd>
       <O.OwnerMagmnTableTd>{data.startDate}</O.OwnerMagmnTableTd>
       <O.OwnerMagmnTableTd>{data.endDate}</O.OwnerMagmnTableTd>
-      <O.OwnerMagmnTableTd>수정</O.OwnerMagmnTableTd>
       <O.OwnerMagmnTableTd>
+        <button onClick={handleEditClick}>수정</button>
         <button onClick={handleDeleteClick}>삭제</button>
       </O.OwnerMagmnTableTd>
     </O.OwnerMagmnTableTr>
