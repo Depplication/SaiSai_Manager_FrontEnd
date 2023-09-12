@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as OME from "../../styles/MemberMngmn/RetailerMemberInfoEdit.style";
 
 function OwnerMemberInfoEdit({ data, onClose }) {
   const [editData, setEditedData] = useState(data);
@@ -14,6 +15,7 @@ function OwnerMemberInfoEdit({ data, onClose }) {
   const handleEditClick = () => {
     onClose(editData);
   };
+
   return (
     <div>
       <button onClick={onClose}>닫기</button>
@@ -49,15 +51,15 @@ function OwnerMemberInfoEdit({ data, onClose }) {
         <div>
           <div>계좌번호</div>
           <input
-            value={editData.account}
-            onChange={(e) => handleInputChange(e, "account")}
+            value={editData.accountNumber}
+            onChange={(e) => handleInputChange(e, "accountNumber")}
           ></input>
         </div>
         <div>
           <div>가입일</div>
           <input
-            value={editData.startDate}
-            onChange={(e) => handleInputChange(e, "startDate")}
+            value={editData.joinDate}
+            onChange={(e) => handleInputChange(e, "joinDate")}
           ></input>
         </div>
         <div>
@@ -69,11 +71,17 @@ function OwnerMemberInfoEdit({ data, onClose }) {
         </div>
         <div>
           <div>id</div>
-          <input></input>
+          <input
+            value={editData.id}
+            onChange={(e) => handleInputChange(e, "id")}
+          ></input>
         </div>
         <div>
           <div>pw</div>
-          <input></input>
+          <input
+            value={editData.password}
+            onChange={(e) => handleInputChange(e, "password")}
+          ></input>
         </div>
         <button onClick={handleEditClick}>수정</button>
       </div>

@@ -1,12 +1,16 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import OwnerMngmnPage from "../src/pages/MemberMngmn/OwnerMngmn";
+import RetailerMngmnPage from "./pages/MemberMngmn/RetailerMngmn";
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/ownermngmn" element={<OwnerMngmnPage />}></Route>
+        <Route
+          exact
+          path="/retailermngmn"
+          element={<RetailerMngmnPage />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
