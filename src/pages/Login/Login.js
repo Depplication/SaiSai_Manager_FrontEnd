@@ -1,17 +1,34 @@
 import React from "react";
-import * as L from "../../styles/Login/Login.style";
 import { useNavigate } from "react-router-dom";
+import { useLogin } from "../../hooks/Auth/userLogin";
 
 function Login() {
-    const navigate = useNavigate();
+  const { id, password, onChange, onSubmit } = useLogin();
+  const navigate = useNavigate();
+
   return (
-    <>
-      <p>아이디</p>
-      <input type="id" className="id" placeholder="아이디를 입력하세요."></input>
-      <p>비밀번호</p>
-      <input type="password" className="password" placeholder="비밀번호를 입력하세요."></input>
-      <button className="loginb" onClick={() => navigate("/")}>로그인</button>
-    </>
+    <div>
+      <h2>로그인</h2>
+      <form onSubmit={onSubmit}>
+        <div>
+          <label htmlFor="id">아이디:</label>
+          <input type="text" id="id" name="id" value={id} onChange={onChange} />
+        </div>
+        <div>
+          <label htmlFor="password">비밀번호:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={password}
+            onChange={onChange}
+          />
+        </div>
+        <button onSubmit={onSubmit}>
+          로그인
+        </button>
+      </form>
+    </div>
   );
 }
 
