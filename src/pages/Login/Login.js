@@ -9,12 +9,10 @@ function Login() {
   return (
     <div>
       <h2>로그인</h2>
-      <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="id">아이디:</label>
           <input type="text" id="id" name="id" value={id} onChange={onChange} />
         </div> 
-        {/* 화나요 */}
         <div>
           <label htmlFor="password">비밀번호:</label>
           <input
@@ -28,7 +26,6 @@ function Login() {
         <button onSubmit={onSubmit}>
           로그인
         </button>
-      </form>
     </div>
   );
 }
