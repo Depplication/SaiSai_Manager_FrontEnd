@@ -13,7 +13,8 @@ function Login() {
         <div>
           <label htmlFor="id">아이디:</label>
           <input type="text" id="id" name="id" value={id} onChange={onChange} />
-        </div>
+        </div> 
+        {/* 화나요 */}
         <div>
           <label htmlFor="password">비밀번호:</label>
           <input
