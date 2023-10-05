@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import * as OME from "../../styles/MemberMngmn/RetailerMemberInfoEdit.style";
 
-function OwnerMemberInfoEdit({ data, onClose }) {
+function RetailerMemberInfoEdit({ data, onClose }) {
   const [editData, setEditedData] = useState(data);
 
   const handleInputChange = (e, field) => {
@@ -89,4 +88,4 @@ function OwnerMemberInfoEdit({ data, onClose }) {
   );
 }
 
-export default OwnerMemberInfoEdit;
+export default RetailerMemberInfoEdit;

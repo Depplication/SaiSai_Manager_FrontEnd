@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as RM from "../../styles/MemberMngmn/RetailerMngmn.style";
 import { useNavigate } from "react-router-dom";
 import RetailerMemberInfoEdit from "./RetailerMemberInfoEdit";
-import useRetailerMngmn from "../../hooks/Auth/useRetailerMngmn";
+//import useRetailerMngmn from "../../hooks/Auth/useRetailerMngmn";
 
 function RetailerMngmn() {
   const navigate = useNavigate();
@@ -89,7 +89,7 @@ function RetailerMngmn() {
   return (
     <RM.RetailerMngmnLayOut>
       <div onClick={() => navigate("/retailermngmn")}>업주</div>
-      <div onClick={() => navigate("/")}>주민</div>
+      <div onClick={() => navigate("/usermngmn")}>주민</div>
       <div>
         <input type="search"></input>
         <img></img>
