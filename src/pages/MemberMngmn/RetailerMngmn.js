@@ -14,10 +14,10 @@ function RetailerMngmn() {
       password: "password",
       name: "김민성",
       company: "사이사이",
-      address: "대구광역시 창리로",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
       phone: "010-0000-0000",
       bank: "대구은행",
-      accountNumber: "123-123456-12",
+      accountNumber: "123-123456121-12",
       joinDate: "2023/00/00",
       endDate: "2023/00/00",
     },
@@ -27,7 +27,7 @@ function RetailerMngmn() {
       password: "password",
       name: "임규연",
       company: "사이사이",
-      address: "대구광역시 창리로",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
       phone: "010-1234-1234",
       bank: "농협은행",
       accountNumber: "023-152468-42",
@@ -40,7 +40,7 @@ function RetailerMngmn() {
       password: "password",
       name: "문주호",
       company: "사이사이",
-      address: "대구광역시 창리로",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
       phone: "010-5644-1567",
       bank: "신한은행",
       accountNumber: "356-741581-72",
@@ -48,12 +48,220 @@ function RetailerMngmn() {
       endDate: "2023/00/00",
     },
     {
-      idx: 4,
+      idx: 5,
       id: "username",
       password: "password",
       name: "조가연",
       company: "사이사이",
-      address: "대구광역시 창리로",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 6,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 7,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 8,
+      id: "username",
+      password: "password",
+      name: "김민성",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-0000-0000",
+      bank: "대구은행",
+      accountNumber: "123-123456121-12",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 9,
+      id: "username",
+      password: "password",
+      name: "임규연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-1234-1234",
+      bank: "농협은행",
+      accountNumber: "023-152468-42",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 10,
+      id: "username",
+      password: "password",
+      name: "문주호",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-5644-1567",
+      bank: "신한은행",
+      accountNumber: "356-741581-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 11,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 12,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 13,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 14,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 15,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 16,
+      id: "username",
+      password: "password",
+      name: "김민성",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-0000-0000",
+      bank: "대구은행",
+      accountNumber: "123-123456121-12",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 17,
+      id: "username",
+      password: "password",
+      name: "임규연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-1234-1234",
+      bank: "농협은행",
+      accountNumber: "023-152468-42",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 18,
+      id: "username",
+      password: "password",
+      name: "문주호",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-5644-1567",
+      bank: "신한은행",
+      accountNumber: "356-741581-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 19,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 20,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
+      phone: "010-6457-7894",
+      bank: "신한은행",
+      accountNumber: "356-123456-72",
+      joinDate: "2023/00/00",
+      endDate: "2023/00/00",
+    },
+    {
+      idx: 21,
+      id: "username",
+      password: "password",
+      name: "조가연",
+      company: "사이사이",
+      address: "대구광역시 달성군 구지면 창리로11길 93",
       phone: "010-6457-7894",
       bank: "신한은행",
       accountNumber: "356-123456-72",
@@ -88,28 +296,32 @@ function RetailerMngmn() {
 
   return (
     <RM.RetailerMngmnLayOut>
-      <div onClick={() => navigate("/retailermngmn")}>업주</div>
-      <div onClick={() => navigate("/usermngmn")}>주민</div>
-      <div>
+      <RM.Box>
+        <RM.RetailerMove onClick={() => navigate("/retailermngmn")}>
+          업주
+        </RM.RetailerMove>
+        <RM.UserMove onClick={() => navigate("/usermngmn")}>주민</RM.UserMove>
+      </RM.Box>
+      {/* <div>
         <input type="search"></input>
         <img></img>
-      </div>
-      <div>정렬</div>
-      <div>필터</div>
+      </div> */}
+      {/* <div>정렬</div>
+      <div>필터</div> */}
       <RM.RetailerMagmnTable>
         <thead>
-          <tr>
-            <RM.RetailerMagmnTableTd>순번</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd>이름</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd>가게명</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd>주소</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd>전화번호</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd>은행</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd>계좌번호</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd>가입일</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd>최근 접속일</RM.RetailerMagmnTableTd>
-            <RM.RetailerMagmnTableTd colSpan="2">비고</RM.RetailerMagmnTableTd>
-          </tr>
+          <RM.Header>
+            <RM.IdxTd>순번</RM.IdxTd>
+            <RM.NameTd>이름</RM.NameTd>
+            <RM.CompanyTd>가게명</RM.CompanyTd>
+            <RM.AddressTd>주소</RM.AddressTd>
+            <RM.PhoneTd>전화번호</RM.PhoneTd>
+            <RM.BankTd>은행</RM.BankTd>
+            <RM.AccountNumberTd>계좌번호</RM.AccountNumberTd>
+            <RM.JoinDateTd>가입일</RM.JoinDateTd>
+            <RM.EndDateTd>최근 접속일</RM.EndDateTd>
+            <RM.Td colSpan="2">비고</RM.Td>
+          </RM.Header>
         </thead>
 
         {dataFromServer.map((data) => (
@@ -144,19 +356,19 @@ function RetailerTable({ data, onDelete, onEdit }) {
   return (
     <tbody>
       <RM.RetailerMagmnTableTr>
-        <RM.RetailerMagmnTableTd>{data.idx}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>{data.name}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>{data.company}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>{data.address}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>{data.phone}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>{data.bank}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>{data.accountNumber}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>{data.joinDate}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>{data.endDate}</RM.RetailerMagmnTableTd>
-        <RM.RetailerMagmnTableTd>
-          <button onClick={handleEditClick}>수정</button>
-          <button onClick={handleDeleteClick}>삭제</button>
-        </RM.RetailerMagmnTableTd>
+        <RM.IdxTd>{data.idx}</RM.IdxTd>
+        <RM.NameTd>{data.name}</RM.NameTd>
+        <RM.CompanyTd>{data.company}</RM.CompanyTd>
+        <RM.AddressTd>{data.address}</RM.AddressTd>
+        <RM.PhoneTd>{data.phone}</RM.PhoneTd>
+        <RM.BankTd>{data.bank}</RM.BankTd>
+        <RM.AccountNumberTd>{data.accountNumber}</RM.AccountNumberTd>
+        <RM.JoinDateTd>{data.joinDate}</RM.JoinDateTd>
+        <RM.EndDateTd>{data.endDate}</RM.EndDateTd>
+        <RM.Td>
+          <span onClick={handleEditClick}>수정 </span>
+          <span onClick={handleDeleteClick}>삭제</span>
+        </RM.Td>
       </RM.RetailerMagmnTableTr>
     </tbody>
   );
