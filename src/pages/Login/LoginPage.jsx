@@ -9,13 +9,13 @@ function LoginPage() {
   const [password, setPassword] = useState("");
 
   return (
-    <L.parents>
-      <L.paren>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            postLogin({ id, password });
-          }}>
+    <L.parents
+      onSubmit={(e) => {
+        e.preventDefault();
+        postLogin({ id, password });
+      }}>
+      <form>
+        <L.mainbox>
           <L.logo
             className="logo"
             xmlns="http://www.w3.org/2000/svg"
@@ -59,25 +59,25 @@ function LoginPage() {
             />
           </L.logo>
           <L.title>ㅅㅇㅅㅇ관리자</L.title>
-          <div>
-            <L.id htmlFor="id">아이디</L.id>
-            <L.idInput
-              type="text"
-              placeholder="아이디를 입력해주세요."
-              onChange={(e) => setId(e.target.value)}
-            />
-          </div>
-          <div>
-            <L.password htmlFor="password">비밀번호</L.password>
-            <L.passInput
-              type="password"
-              placeholder="비밀번호를 입력해주세요."
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <L.logButton type="submit">로그인</L.logButton>
-        </form>
-      </L.paren>
+        </L.mainbox>
+        <L.idfield>
+          <L.id htmlFor="id">아이디</L.id>
+          <L.idInput
+            type="text"
+            placeholder="아이디를 입력해주세요."
+            onChange={(e) => setId(e.target.value)}
+          />
+        </L.idfield>
+        <L.pass>
+          <L.password htmlFor="password">비밀번호</L.password>
+          <L.passInput
+            type="password"
+            placeholder="비밀번호를 입력해주세요."
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </L.pass>
+        <L.logButton type="submit">로그인</L.logButton>
+      </form>
     </L.parents>
   );
 }
