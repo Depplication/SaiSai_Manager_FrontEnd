@@ -1,25 +1,27 @@
 import styled from "styled-components";
 
+export const parents = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+export const paren = styled.div``;
+
 export const id = styled.label`
   color: var(--gray-diongray-350, #797979);
   font-family: Pretendard;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 22px; /* 157.143% */
-  position: absolute;
-  margin: 367px 464px;
+  line-height: 22px;
+  /* position: absolute; */ /* 이 줄을 제거하여 절대 위치 설정을 해제하세요 */
 `;
 
-export const logo = styled.svg`
-  margin: 186px 679px;
-  position: absolute;
-`;
+export const logo = styled.svg``;
 
 export const title = styled.div`
   color: var(--main-dionpink-300, #ff6362);
-  position: absolute;
-  margin: 283px 657px;
   /* Android/Bold/Body 1 */
   font-family: Pretendard;
   font-size: 20px;
@@ -35,10 +37,14 @@ export const idInput = styled.input`
   padding: 0px 12px;
   align-items: center;
   gap: 10px;
-  position: absolute;
-  margin: 390px 464px;
-  border: white;
+  /* position: absolute; */ /* 이 줄을 제거하여 절대 위치 설정을 해제하세요 */
+  border: 1px solid white; /* border 스타일을 수정 */
   border-bottom: 2px solid var(--gray-diongray-150, #d9d9d9);
+  outline: none;
+
+  &::placeholder {
+    color: #d9d9d9;
+  }
 `;
 
 export const password = styled.label`
@@ -50,8 +56,6 @@ export const password = styled.label`
   font-style: normal;
   font-weight: 500;
   line-height: 22px; /* 157.143% */
-  position: absolute;
-  margin: 462px 464px;
 `;
 
 export const logButton = styled.button`
@@ -76,7 +80,6 @@ export const logButton = styled.button`
   font-weight: 600;
   line-height: 28px; /* 155.556% */
   position: absolute;
-  margin: 650px 464px;
 `;
 
 export const passInput = styled.input`
@@ -86,8 +89,12 @@ export const passInput = styled.input`
   padding: 0px 12px;
   align-items: center;
   gap: 10px;
-  position: absolute;
-  margin: 485px 464px;
-  border: white;
+  /* position: absolute; */ /* 이 줄을 제거하여 절대 위치 설정을 해제하세요 */
+  border: 1px solid white; /* border 스타일을 수정 */
   border-bottom: 2px solid var(--gray-diongray-150, #d9d9d9);
+  outline: none;
+
+  &::placeholder {
+    color: #d9d9d9;
+  }
 `;
