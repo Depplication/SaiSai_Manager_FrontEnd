@@ -1,150 +1,108 @@
+// HeaderStyles.js 파일
+
 import styled from "styled-components";
 
-export const logo = styled.svg`
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  margin: 8px 1192px 8px 200px;
-`;
-
-export const header = styled.div`
-  width: 1440px;
-  height: 64px;
-  flex-shrink: 0;
-  border-bottom: 1px solid var(--gray-diongray-50, #f5f5f5);
-  background: var(--essential-dionwhite, #fff);
-`;
-
-export const title1 = styled.div`
-  color: var(--main-dionpink-300, #ff6362);
-
-  /* Web/Bold/Display 1 */
-  font-family: Pretendard;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 36px; /* 150% */
-  letter-spacing: -0.6px;
-  position: absolute;
-  margin: 14px 1102px 14px 256px;
-`;
-
-export const title2 = styled.div`
-  color: var(--main-dionpink-300, #ff6362);
-  /* Web/Bold/Subhead 2 */
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: -0.6px;
-  position: absolute;
-  margin: 20px 1053px 18px 346px;
-`;
-
-export const memberManagebox = styled.div`
+export const HeaderLayout = styled.div`
+  width: 90rem;
+  height: 4rem;
+  background-color: #fff;
   display: flex;
-  padding: 19px 24px 19px 22px;
-  margin-left: 660px;
-  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.063rem solid #f5f5f5;
 `;
 
-export const memberManage = styled.div`
-  color: var(--gray-diongray-400, #404040);
-  text-align: center;
-  font-variant-numeric: lining-nums proportional-nums;
-
-  /* Headline/Subhead-02 */
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: -0.6px;
+export const Logo = styled.img`
+  align-items: center;
+  padding-left: 12.5rem;
 `;
 
-export const storeManageBox = styled.div`
+export const MenuDiv = styled.div`
   display: flex;
-  padding: 19px 24px 19px 22px;
-  margin-left: 780px;
-  position: absolute;
+  align-items: center;
+  padding-right: 1.5rem;
 `;
 
-export const storeManage = styled.div`
-  color: var(--gray-diongray-400, #404040);
+//회원관리
+export const MemberMngmnDiv = styled.div`
+  width: 6.25rem;
+  margin-right: 20px;
+`;
+
+export const MemberMngmn = styled.p`
+  font-size: 1rem;
   text-align: center;
-  font-variant-numeric: lining-nums proportional-nums;
+  color: #383838;
+  cursor: pointer;
 
-  /* Headline/Subhead-02 */
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: -0.6px;
+  &:hover {
+    color: #ff6362;
+  }
 `;
 
-export const calculateBox = styled.div`
-  display: flex;
-  width: 100px;
-  padding: 19px 35px 19px 37px;
-  margin-left: 900px;
-  position: absolute;
+//가게관리
+export const StoreMngmnDiv = styled.div`
+  width: 6.25rem;
+  margin-right: 20px;
 `;
 
-export const calculate = styled.div`
-  color: var(--main-dionpink-300, #ff6362);
+export const StoreMngmn = styled.p`
+  font-size: 1rem;
   text-align: center;
-  font-variant-numeric: lining-nums proportional-nums;
+  color: #383838;
+  cursor: pointer;
 
-  /* Headline/Subhead-02 */
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: -0.6px;
+  &:hover {
+    color: #ff6362;
+  }
 `;
 
-export const centerBox = styled.div`
-  display: flex;
-  padding: 19px 23px;
-  margin-left: 1020px;
-  position: absolute;
+//정산
+export const CalculateDiv = styled.div`
+  width: 6.25rem;
+  margin-right: 20px;
 `;
 
-export const center = styled.div`
-  color: var(--gray-gray-09, #383838);
+export const Calculate = styled.p`
+  font-size: 1rem;
   text-align: center;
-  font-variant-numeric: lining-nums proportional-nums;
+  color: #383838;
+  cursor: pointer;
 
-  /* Headline/Subhead-02 */
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: -0.6px;
+  &:hover {
+    color: #ff6362;
+  }
 `;
 
-export const eventBox = styled.div`
-  display: flex;
-  padding: 19px 29px 19px 30px;
-  margin-left: 1140px;
-  position: absolute;
+//고객센터
+export const CustomerCenterDiv = styled.div`
+  width: 6.25rem;
+  margin-right: 20px;
 `;
 
-export const event = styled.div`
-  color: var(--gray-gray-09, #383838);
+export const CustomerCenter = styled.p`
+  font-size: 1rem;
   text-align: center;
-  font-variant-numeric: lining-nums proportional-nums;
+  color: #383838;
+  cursor: pointer;
 
-  /* Headline/Subhead-02 */
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: -0.6px;
+  &:hover {
+    color: #ff6362;
+  }
+`;
+
+//이벤트
+export const EventDiv = styled.div`
+  width: 6.25rem;
+`;
+
+export const Event = styled.p`
+  font-size: 1rem;
+  text-align: center;
+  color: #383838;
+  cursor: pointer;
+
+  &:hover {
+    color: #ff6362;
+  }
 `;
