@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import LoginPage from "./pages/Login/Login";
 import LoginPage from "./pages/Login/LoginPage";
 import PointHistoryPage from "./pages/PointHistory/PointHistoryPage";
 import PaymentHistoryPage from "./pages/PaymentHistory/PaymentHistoryPage";
 import Header from "./components/header/header";
+import RetailerMngmnPage from "./pages/MemberMngmn/RetailerMngmn";
+import UserMngmnPage from "./pages/MemberMngmn/UserMngmn";
 
 function Router() {
   return (
@@ -23,6 +24,12 @@ function Router() {
           path="/paymenthistory"
           element={<PaymentHistoryPage />}
         ></Route>
+        <Route
+          exact
+          path="/retailermngmn"
+          element={<RetailerMngmnPage />}
+        ></Route>
+        <Route exact path="/usermngmn" element={<UserMngmnPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
