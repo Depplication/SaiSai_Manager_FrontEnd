@@ -29,6 +29,7 @@ const useUser = () => {
         },
       }
     );
+    console.log(data);
     return data;
   };
 
