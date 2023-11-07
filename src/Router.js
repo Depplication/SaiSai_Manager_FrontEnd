@@ -6,6 +6,10 @@ import PaymentHistoryPage from "./pages/PaymentHistory/PaymentHistoryPage";
 import Header from "./components/header/header";
 import RetailerMngmnPage from "./pages/MemberMngmn/RetailerMngmn";
 import UserMngmnPage from "./pages/MemberMngmn/UserMngmn";
+import RetailerInfoEditPage from "./pages/MemberMngmn/RetailerMemberInfoEdit";
+import UserInfoEditPage from "./pages/MemberMngmn/UserMemberInfoEdit";
+import StoreMngmnPage from "./pages/StoreMngmn/StoreMngmn";
+import StoreMngmnEditPage from "./pages/StoreMngmn/StoreMngmnEdit";
 
 function Router() {
   return (
@@ -16,7 +20,7 @@ function Router() {
         <Route exact path="/login" element={<LoginPage />}></Route>
         <Route
           exact
-          path="/pointHistory"
+          path="/pointhistory"
           element={<PointHistoryPage />}
         ></Route>
         <Route
@@ -29,7 +33,23 @@ function Router() {
           path="/retailermngmn"
           element={<RetailerMngmnPage />}
         ></Route>
+        <Route
+          exact
+          path="/retailerinfoedit/:id"
+          element={<RetailerInfoEditPage />}
+        ></Route>
         <Route exact path="/usermngmn" element={<UserMngmnPage />}></Route>
+        <Route
+          exact
+          path="/userinfoedit/:id"
+          element={<UserInfoEditPage />}
+        ></Route>
+        <Route exact path="/storemngmn" element={<StoreMngmnPage />}></Route>
+        <Route
+          exact
+          path="/storemngmnedit/:storeName"
+          element={<StoreMngmnEditPage />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );

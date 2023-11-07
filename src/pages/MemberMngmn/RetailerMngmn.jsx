@@ -1,193 +1,48 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as RM from "../../styles/MemberMngmn/RetailerMngmn.style";
 import { useNavigate } from "react-router-dom";
 import RetailerMemberInfoEdit from "./RetailerMemberInfoEdit";
-//import useRetailerMngmn from "../../hooks/Auth/useRetailerMngmn";
+import axios from "axios";
+import { customAxios } from "../../lib/axios/axios";
+import useRetailer from "../../hooks/RetailerManagemn/useRetailer";
+import tokenStore from "../../lib/token/token";
+import { ACCESS_TOKEN_KEY } from "../../constant/token";
+import { RetailerList } from "../../constant/retailerlist";
 
 function RetailerMngmn() {
   const navigate = useNavigate();
 
-  const [dataFromServer, setDataFromServer] = useState([
-    {
-      idx: 1,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 2,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 3,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 4,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 5,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 6,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 7,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 8,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 9,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 10,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 11,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 12,
-      id: "username",
-      password: "password",
-      name: "이름",
-      company: "사이사이",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      bank: "NH 농협",
-      accountNumber: "3561-4877-84523",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-  ]);
+  const { getRetailerList } = useRetailer();
 
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [selectedData, setSelectedData] = useState(null);
+  const [dataFromServer, setDataFromServer] = useState(RetailerList);
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  useEffect(() => {
+    console.log(dataFromServer);
+  }, [dataFromServer]);
+
+  const fetchUsers = async () => {
+    const data = await getRetailerList({ page: 1, size: 10 });
+    console.log("hihi");
+    console.log(data.list);
+    setDataFromServer(data.list);
+  };
+
+  // const { getToken } = tokenStore();
+
+  // console.log(getToken(ACCESS_TOKEN_KEY));
 
   const handleEditClick = (data) => {
-    setSelectedData(data);
-    setIsPopupOpen(true);
+    navigate("/retailerinfoedit", { state: { data } });
   };
 
   const handleDelete = (idx) => {
     setDataFromServer((prevData) =>
       prevData.filter((item) => item.idx !== idx)
     );
-  };
-
-  const handleEditSubmit = (editData) => {
-    setDataFromServer((prevData) => {
-      return prevData.map((item) =>
-        item.idx === editData.idx ? editData : item
-      );
-    });
-
-    setIsPopupOpen(false);
   };
 
   return (
@@ -221,20 +76,13 @@ function RetailerMngmn() {
 
               {dataFromServer.map((data) => (
                 <RetailerTable
-                  key={data.idx}
+                  key={data.id}
                   data={data}
                   onDelete={handleDelete}
                   onEdit={handleEditClick}
                 />
               ))}
             </RM.RetailerMemberTable>
-
-            {isPopupOpen && (
-              <RetailerMemberInfoEdit
-                data={selectedData}
-                onClose={handleEditSubmit}
-              />
-            )}
           </RM.TableWrapper>
         </RM.TableContainer>
       </RM.RetailerMngmnContainer>
@@ -242,13 +90,11 @@ function RetailerMngmn() {
   );
 }
 
-function RetailerTable({ data, onDelete, onEdit }) {
+function RetailerTable({ data, onDelete }) {
+  const navigate = useNavigate();
+
   const handleDeleteClick = () => {
     onDelete(data.idx);
-  };
-
-  const handleEditClick = () => {
-    onEdit(data);
   };
 
   return (
@@ -262,7 +108,9 @@ function RetailerTable({ data, onDelete, onEdit }) {
         <RM.BodyJoinDate>{data.joinDate}</RM.BodyJoinDate>
         <RM.BodyEndDate>{data.endDate}</RM.BodyEndDate>
         <RM.BodyNote>
-          <RM.Retouch onClick={handleEditClick}>수정 </RM.Retouch>
+          <RM.Retouch onClick={() => navigate(`/retailerinfoedit/${data.id}`)}>
+            수정
+          </RM.Retouch>
           <RM.Delete onClick={handleDeleteClick}>삭제</RM.Delete>
         </RM.BodyNote>
       </RM.BodyTr>
