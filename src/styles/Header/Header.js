@@ -28,6 +28,7 @@ export const title1 = styled.div`
   letter-spacing: -0.6px;
   position: absolute;
   margin: 14px 1102px 14px 256px;
+  white-space: nowrap;
 `;
 
 export const title2 = styled.div`
@@ -41,6 +42,7 @@ export const title2 = styled.div`
   letter-spacing: -0.6px;
   position: absolute;
   margin: 20px 1053px 18px 346px;
+  white-space: nowrap;
 `;
 
 export const memberManagebox = styled.div`
@@ -62,6 +64,7 @@ export const memberManage = styled.div`
   font-weight: 600;
   line-height: 26px; /* 162.5% */
   letter-spacing: -0.6px;
+  white-space: nowrap;
 `;
 
 export const storeManageBox = styled.div`
@@ -83,6 +86,7 @@ export const storeManage = styled.div`
   font-weight: 600;
   line-height: 26px; /* 162.5% */
   letter-spacing: -0.6px;
+  white-space: nowrap;
 `;
 
 export const calculateBox = styled.div`
@@ -105,6 +109,7 @@ export const calculate = styled.div`
   font-weight: 600;
   line-height: 26px; /* 162.5% */
   letter-spacing: -0.6px;
+  white-space: nowrap;
 `;
 
 export const centerBox = styled.div`
@@ -126,6 +131,7 @@ export const center = styled.div`
   font-weight: 600;
   line-height: 26px; /* 162.5% */
   letter-spacing: -0.6px;
+  white-space: nowrap;
 `;
 
 export const eventBox = styled.div`
@@ -147,4 +153,5 @@ export const event = styled.div`
   font-weight: 600;
   line-height: 26px; /* 162.5% */
   letter-spacing: -0.6px;
+  white-space: nowrap;
 `;

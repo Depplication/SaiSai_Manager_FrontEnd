@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
+export const all = styled.div`
+  width: 1040px;
+  height: 2000px;
+`;
+
 export const pointHistoryBox = styled.div`
+  white-space: nowrap;
   padding: 8px 64px;
   gap: 10px;
   border-bottom: 1px solid var(--gray-diongray-250, #8e8e8f);
@@ -22,6 +28,7 @@ export const pointHistory = styled.div`
 `;
 
 export const couponHistoryBox = styled.div`
+  white-space: nowrap;
   padding: 8px 64px;
   gap: 10px;
   border-bottom: 1px solid var(--main-dionpink-300, #ff6362);
@@ -363,7 +370,6 @@ export const ex7 = styled.div`
   margin: 700px 0px 0px 200px;
 `;
 
-
 export const ex8 = styled.div`
   width: 1040px;
   height: 64px;
@@ -373,7 +379,6 @@ export const ex8 = styled.div`
   position: absolute;
   margin: 772px 0px 0px 200px;
 `;
-
 
 export const ex9 = styled.div`
   width: 1040px;
@@ -385,7 +390,6 @@ export const ex9 = styled.div`
   margin: 844px 0px 0px 200px;
 `;
 
-
 export const ex10 = styled.div`
   width: 1040px;
   height: 64px;
@@ -396,7 +400,6 @@ export const ex10 = styled.div`
   margin: 916px 0px 0px 200px;
 `;
 
-
 export const ex11 = styled.div`
   width: 1040px;
   height: 64px;
@@ -404,5 +407,5 @@ export const ex11 = styled.div`
   border-radius: 8px;
   background: var(--essential-dionwhite, #fff);
   position: absolute;
-  margin: 988px 0px 0px 200px
+  margin: 988px 0px 0px 200px;
 `;
