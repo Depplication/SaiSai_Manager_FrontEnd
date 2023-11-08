@@ -1,13 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Router from "./Router";
-import Header from "./components/header/header";
 
 function App() {
-  return (
-    <div>
-      <Header></Header>
-      <Router></Router>
-    </div>
-  );
+  return <Router></Router>;
 }
 export default App;
