@@ -25,10 +25,10 @@ function RetailerMngmn() {
   }, [dataFromServer]);
 
   const fetchUsers = async () => {
-    const data = await getRetailerList({ page: 1, size: 10 });
-    console.log("hihi");
-    console.log(data.list);
-    setDataFromServer(data.list);
+    const data = await getRetailerList({ page: 1, size: 20 });
+    const sortedData = data.list.sort((a, b) => a.idx - b.idx);
+    console.log(sortedData);
+    setDataFromServer(sortedData);
   };
 
   // const { getToken } = tokenStore();

@@ -31,7 +31,7 @@ function UserMngmn() {
   }, [dataFromServer]);
 
   useEffect(() => {
-    fetchUser({ page: 1, size: 10 });
+    fetchUser({ page: 1, size: 20 });
   }, []);
 
   return (

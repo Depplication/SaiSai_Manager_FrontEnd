@@ -29,7 +29,7 @@ function UserMemberInfoEdit() {
   };
 
   useEffect(() => {
-    fetchUser({ page: 1, size: 10 });
+    fetchUser({ page: 1, size: 20 });
   }, []);
 
   const userInfo = userList.find((user) => id === user.id);

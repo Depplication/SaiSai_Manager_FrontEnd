@@ -11,7 +11,7 @@ const useUser = () => {
         headers: {
           [REQUEST_TOKEN_KEY]:
             "Bearer " +
-            "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5OTM1OTM2MSwiZXhwIjoxNjk5MzYyOTYxfQ.mJD4HM_1ISI6H81gEB28EHu2aSamJN8l4XElT5ccqE4",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5OTM2NjIxNSwiZXhwIjoxNjk5MzY5ODE1fQ.ZE_1w1h79XtlwzF8SS_0RIWlYe423N2ugACgtJkgyfw",
         },
       }
     );
@@ -25,7 +25,7 @@ const useUser = () => {
         headers: {
           [REQUEST_TOKEN_KEY]:
             "Bearer " +
-            "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5OTM1OTM2MSwiZXhwIjoxNjk5MzYyOTYxfQ.mJD4HM_1ISI6H81gEB28EHu2aSamJN8l4XElT5ccqE4",
+            "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5OTM2NjIxNSwiZXhwIjoxNjk5MzY5ODE1fQ.ZE_1w1h79XtlwzF8SS_0RIWlYe423N2ugACgtJkgyfw",
         },
       }
     );
