@@ -60,12 +60,17 @@ function LoginPage() {
         <L.title>ㅅㅇㅅㅇ관리자</L.title>
         <div>
           <L.id htmlFor="id">아이디</L.id>
-          <L.idInput type="text"   placeholder="아이디를 입력해주세요." onChange={(e) => setId(e.target.value)} />
+          <L.idInput
+            type="text"
+            placeholder="아이디를 입력해주세요."
+            onChange={(e) => setId(e.target.value)}
+          />
         </div>
         <div>
           <L.password htmlFor="password">비밀번호</L.password>
           <L.passInput
-            type="password"  placeholder="비밀번호를 입력해주세요."
+            type="password"
+            placeholder="비밀번호를 입력해주세요."
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
