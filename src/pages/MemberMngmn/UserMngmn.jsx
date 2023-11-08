@@ -1,177 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as UM from "../../styles/MemberMngmn/UserMngmn.style";
 import { useNavigate } from "react-router-dom";
 import UserMemberInfoEdit from "./UserMemberInfoEdit";
+import { UserList } from "../../constant/userlist";
+import axios from "axios";
+import { REQUEST_TOKEN_KEY } from "../../constant/token";
+import useUser from "../../hooks/RetailerManagemn/useRetailer";
 
 function UserMngmn() {
   const navigate = useNavigate();
 
-  const [dataFromServer, setDataFromServer] = useState([
-    {
-      idx: 1,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 2,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 3,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 4,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 5,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 6,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 7,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 8,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 9,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 10,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 11,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-    {
-      idx: 12,
-      id: "username",
-      password: "password",
-      name: "이름",
-      address: "대구광역시 달성군 구지면 창리로11길 93",
-      phone: "010-4180-3331",
-      email: "saisai@naver.com",
-      gender: "남자",
-      age: "10대",
-      joinDate: "2023-10-16",
-      endDate: "2023-10-16",
-    },
-  ]);
+  const [dataFromServer, setDataFromServer] = useState(UserList);
 
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [selectedData, setSelectedData] = useState(null);
-
-  const handleEditClick = (data) => {
-    setSelectedData(data);
-    setIsPopupOpen(true);
-  };
+  const { getUserList } = useUser();
 
   const handleDelete = (idx) => {
     setDataFromServer((prevData) =>
@@ -179,15 +20,19 @@ function UserMngmn() {
     );
   };
 
-  const handleEditSubmit = (editData) => {
-    setDataFromServer((prevData) => {
-      return prevData.map((item) =>
-        item.idx === editData.idx ? editData : item
-      );
-    });
-
-    setIsPopupOpen(false);
+  const fetchUser = async ({ page, size }) => {
+    const data = await getUserList({ page, size });
+    console.log(data.list);
+    setDataFromServer(data.list);
   };
+
+  useEffect(() => {
+    console.log(dataFromServer);
+  }, [dataFromServer]);
+
+  useEffect(() => {
+    fetchUser({ page: 1, size: 20 });
+  }, []);
 
   return (
     <UM.UserMngmnLayout>
@@ -218,15 +63,9 @@ function UserMngmn() {
               </UM.HeaderThead>
 
               {dataFromServer.map((data) => (
-                <Table
-                  key={data.idx}
-                  data={data}
-                  onDelete={handleDelete}
-                  onEdit={handleEditClick}
-                />
+                <Table key={data.idx} data={data} onDelete={handleDelete} />
               ))}
             </UM.UserMemberTable>
-            {/*팝업*/}
           </UM.TableWrapper>
         </UM.TableContainer>
       </UM.UserMngmnContainer>
@@ -234,15 +73,11 @@ function UserMngmn() {
   );
 }
 
-function Table({ data, onDelete, onEdit }) {
+function Table({ data, onDelete }) {
   const navigate = useNavigate();
 
   const handleDeleteClick = () => {
     onDelete(data.idx);
-  };
-
-  const handleEditClick = () => {
-    onEdit(data);
   };
 
   return (
@@ -255,7 +90,9 @@ function Table({ data, onDelete, onEdit }) {
         <UM.BodyJoinDate>{data.joinDate}</UM.BodyJoinDate>
         <UM.BodyEndDate>{data.endDate}</UM.BodyEndDate>
         <UM.BodyNote>
-          <UM.Retouch>수정</UM.Retouch>
+          <UM.Retouch onClick={() => navigate(`/userinfoedit/${data.id}`)}>
+            수정
+          </UM.Retouch>
           <UM.Delete onClick={handleDeleteClick}>삭제</UM.Delete>
         </UM.BodyNote>
       </UM.BodyTr>

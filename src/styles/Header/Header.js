@@ -1,6 +1,6 @@
 // HeaderStyles.js 파일
 
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderLayout = styled.div`
   width: 90rem;
@@ -14,13 +14,12 @@ export const HeaderLayout = styled.div`
 
 export const Logo = styled.img`
   align-items: center;
-  padding-left: 12.5rem;
+  padding-left: 10%;
 `;
 
 export const MenuDiv = styled.div`
   display: flex;
   align-items: center;
-  padding-right: 1.5rem;
 `;
 
 //회원관리
@@ -34,6 +33,12 @@ export const MemberMngmn = styled.p`
   text-align: center;
   color: #383838;
   cursor: pointer;
+
+  ${(props) =>
+    props.isMemberMngmn &&
+    css`
+      color: #ff6362;
+    `}
 
   &:hover {
     color: #ff6362;
@@ -52,6 +57,12 @@ export const StoreMngmn = styled.p`
   color: #383838;
   cursor: pointer;
 
+  ${(props) =>
+    props.isStoreMngmn &&
+    css`
+      color: #ff6362;
+    `}
+
   &:hover {
     color: #ff6362;
   }
@@ -68,6 +79,12 @@ export const Calculate = styled.p`
   text-align: center;
   color: #383838;
   cursor: pointer;
+
+  ${(props) =>
+    props.isCalculate &&
+    css`
+      color: #ff6362;
+    `}
 
   &:hover {
     color: #ff6362;
@@ -86,6 +103,12 @@ export const CustomerCenter = styled.p`
   color: #383838;
   cursor: pointer;
 
+  ${(props) =>
+    props.isCustomerCenter &&
+    css`
+      color: #ff6362;
+    `}
+
   &:hover {
     color: #ff6362;
   }
@@ -101,6 +124,12 @@ export const Event = styled.p`
   text-align: center;
   color: #383838;
   cursor: pointer;
+
+  ${(props) =>
+    props.isEvent &&
+    css`
+      color: #ff6362;
+    `}
 
   &:hover {
     color: #ff6362;
